@@ -104,7 +104,7 @@ async function _html(req, res) {
     pages.push(_.last(pages) + 1);
   }
   pages = pages.filter((page) => page <= _.ceil(jobCounts[state] / pageSize));
-
+  console.log(JSON.stringify(jobs));
   return res.render('dashboard/templates/queueJobsByState', {
     basePath,
     queueName,
